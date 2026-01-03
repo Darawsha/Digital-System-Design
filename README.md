@@ -10,15 +10,18 @@ Digital-System-Design/
 ├── MUX/             # Multiplexers
 ├── Decoders/        # Decoder circuits
 ├── Sequential/      # FSMs and sequential logic
+├── PatternCounter/  # Pattern matching counter
+├── Documentation/   # Diagrams and design documents
 └── Notes/           # Learning notes
 ```
 
 ## Modules
 
-| Folder     | Modules                |
-| ---------- | ---------------------- |
-| Adders     | Half Adder, Full Adder |
-| MUX        | 4-to-1 Multiplexer     |
-| Decoders   | 2-to-4 Decoder         |
-| Sequential | GCD FSM                |
+| Folder         | Modules                |
+| -------------- | ---------------------- |
+| Adders         | Half Adder, Full Adder |
+| MUX            | 4-to-1 Multiplexer     |
+| Decoders       | 2-to-4 Decoder         |
+| Sequential     | GCD FSM                |
+| PatternCounter | Pattern Counter FSM    |
 
