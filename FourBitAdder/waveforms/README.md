@@ -1,6 +1,5 @@
 # Waveforms
 
-Add your simulation waveforms here.
 
 **Example:**
 
