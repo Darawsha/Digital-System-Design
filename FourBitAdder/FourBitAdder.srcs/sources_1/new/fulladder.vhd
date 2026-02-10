@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 02/07/2026 09:21:11 PM
+-- Create Date: 02/08/2026 02:16:49 PM
 -- Design Name: 
 -- Module Name: fulladder - Behavioral
 -- Project Name: 
@@ -41,6 +41,7 @@ end fulladder;
 
 architecture Behavioral of fulladder is
 
+
 component halfadder
     port (
         a : in  std_logic;
@@ -59,5 +60,7 @@ adr1: halfadder port map ( a => a , b => b ,s => s1, c => s2 );
 adr2: halfadder port map ( a => s1 , b => c_in ,s => s, c => s3 );
 
 c_out <= s2 or s3;
+
+
 
 end Behavioral;

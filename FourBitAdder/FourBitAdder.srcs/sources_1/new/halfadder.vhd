@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 02/07/2026 09:18:36 PM
+-- Create Date: 02/08/2026 02:13:01 PM
 -- Design Name: 
 -- Module Name: halfadder - Behavioral
 -- Project Name: 

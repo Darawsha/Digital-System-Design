@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 02/07/2026 09:35:14 PM
+-- Create Date: 02/08/2026 02:17:50 PM
 -- Design Name: 
 -- Module Name: fulladder_tb - Behavioral
 -- Project Name: 
@@ -36,7 +36,8 @@ entity fulladder_tb is
 end fulladder_tb;
 
 architecture Behavioral of fulladder_tb is
-    component fulladder port ( a : in  STD_LOGIC; b : in  STD_LOGIC; c_in : in  STD_LOGIC; s : out STD_LOGIC; c_out : out STD_LOGIC );
+
+ component fulladder port ( a : in  STD_LOGIC; b : in  STD_LOGIC; c_in : in  STD_LOGIC; s : out STD_LOGIC; c_out : out STD_LOGIC );
     end component;
    
     signal a_tb : std_logic := '0';
@@ -77,5 +78,6 @@ begin
 
         wait;
     end process;
+
 
 end Behavioral;

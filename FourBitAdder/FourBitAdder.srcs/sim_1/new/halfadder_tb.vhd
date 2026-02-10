@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 02/07/2026 09:48:38 PM
+-- Create Date: 02/08/2026 02:13:47 PM
 -- Design Name: 
 -- Module Name: halfadder_tb - Behavioral
 -- Project Name: 
@@ -36,6 +36,7 @@ entity halfadder_tb is
 end halfadder_tb;
 
 architecture Behavioral of halfadder_tb is
+
 component halfadder port ( a : in std_logic ; b : in std_logic ; s : out std_logic ; c : out std_logic);
 
 end component ; 
