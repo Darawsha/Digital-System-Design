@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module bit_part2(
+module Async4BitCntr_Behav(
     input up_down,
     input clk,
     input reset,

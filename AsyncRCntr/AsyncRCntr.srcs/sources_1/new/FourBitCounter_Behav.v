@@ -30,6 +30,6 @@ module Async4BitCntr_Behav(
     wire w1;
 
     ClkDivider div (clk , w1);
-    bit_part2(.up_down(up_down), .clk(w1), .reset(reset), .out(out));
+    Async4BitCntr_Behav(.up_down(up_down), .clk(w1), .reset(reset), .out(out));
 
 endmodule
