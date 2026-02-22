@@ -1,5 +1,6 @@
 `timescale 1ns/1ps
 
+
 module Async4BitCntr_tb;
 
     reg En;
@@ -21,13 +22,12 @@ module Async4BitCntr_tb;
         forever #5 CLK = ~CLK;
     end
 
-    // Stimulus
     initial begin
         En = 0;
-        Reset = 1;
+        Reset = 0;
 
         #10;
-        Reset = 0;
+        Reset =1;
         En = 1;
 
         #150;
@@ -41,13 +41,7 @@ module Async4BitCntr_tb;
         $finish;
     end
 
-    // Monitor output in console
-    initial begin
-        $monitor("Time=%0t  Reset=%b En=%b Q=%b",
-                  $time, Reset, En, Q);
-    end
 
-    // Waveform dumping
     initial begin
         $dumpfile("wave.vcd");
         $dumpvars(0, Async4BitCntr_tb);
