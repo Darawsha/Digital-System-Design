@@ -36,14 +36,13 @@ module TOP_LCD(
     wire Timer_Done;
 
     ClkDivider uut1(
-        .clk(CLK),
-        .tick(tick_1s)
+        .clk_in(CLK),
+        .clk_out(tick_1s)
     );
 
     CountdownTimer uut2(
         .clk(CLK),
         .set(set),
-        .tick_1s(tick_1s),
         .digit0_in(TimerDigit0),
         .digit1_in(TimerDigit1),
         .digit0(digit0),
