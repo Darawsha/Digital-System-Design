@@ -24,13 +24,13 @@ module TOP_LCD(
     input set,
     input [3:0] TimerDigit0,
     input [3:0] TimerDigit1,
-    output RS,
+    output  RS,
     output RW,
     output E,
     output [7:0] DB
 );
 
-    wire tick_1s;
+    wire CLKD;
     wire [3:0] digit0;
     wire [3:0] digit1;
     wire Timer_Done;
@@ -41,7 +41,7 @@ module TOP_LCD(
     );
 
     CountdownTimer uut2(
-        .clk(CLK),
+        .clk(CLKD),
         .set(set),
         .digit0_in(TimerDigit0),
         .digit1_in(TimerDigit1),

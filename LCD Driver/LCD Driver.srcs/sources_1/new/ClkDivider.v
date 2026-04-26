@@ -21,11 +21,12 @@
 
 
 module ClkDivider (
-    input wire clk_in,
+    input  clk_in,
     output reg clk_out
 );
 
-reg [26:0] counter = 0;
+integer counter = 0;
+initial clk_out = 0;
 
 always @(posedge clk_in) begin
 
@@ -39,4 +40,3 @@ end
 end
 end
 endmodule
-
