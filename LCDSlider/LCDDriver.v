@@ -19,7 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 
-module LCDDriver_Part3(
+module LCDDriver(
     input CLK,
     output reg [7:0] DB,
     output reg E,
@@ -30,9 +30,7 @@ module LCDDriver_Part3(
     reg [7:0] charW = 8'b01010111;
     reg [7:0] charE = 8'b01000101;
     reg [7:0] location  = 8'b00001110;
-    reg [7:0] location2 = 8'b10001110; // as loop from 00 to 0f in first line and when it reaches 0f, it goes to 00 and loops from 00 to 0f
-    // display "WE" on the lcd and loop it from 00 to 0f in the first line and when it reaches 0f, it goes to 00 and loops from 00 to 0f
-
+    reg [7:0] location2 = 8'b10001110;
 
     integer counter = 0;
 
@@ -48,7 +46,7 @@ module LCDDriver_Part3(
 
         counter <= counter + 1;
 
-        // 20 ms startup
+
         if (counter == 2000000) begin
             RS <= 0; RW <= 0; E <= 1; DB <= 8'b00111000;   // Function Set
         end
@@ -85,7 +83,6 @@ module LCDDriver_Part3(
             E <= 0;
         end
 
-        // write W
         else if (counter == 2180500) begin
             RS <= 1; RW <= 0; E <= 1; DB <= charW;
         end
@@ -93,16 +90,14 @@ module LCDDriver_Part3(
             E <= 0;
         end
 
-        // write E
+
         else if (counter == 2184600) begin
             RS <= 1; RW <= 0; E <= 1; DB <= charE;
         end
         else if (counter == 2184700) begin
             E <= 0;
         end
-                            ///. start of display loop
 
-        // refresh loop
         else if (counter == 2209200) begin
             RS <= 0;
             RW <= 0;
