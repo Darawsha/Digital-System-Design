@@ -36,6 +36,7 @@ Each project folder contains source files, testbenches, constraints, waveform ca
 | [LCDSlider](LCDSlider) | LCD slider/countdown timer files | LCD driver source and experiment PDF |
 | [VGA controller - Color display](VGA%20controller%20-%20Color%20display) | VGA color output controller | VGA controller, clock divider, constraints, screenshot |
 | [VGA controller - Image Display](VGA%20controller%20-%20Image%20Display) | VGA image display controller | VGA controller, image memory IP, COE image data |
+| [VGA controller - Moving box](VGA%20controller%20-%20Moving%20box) | VGA Square display and controller | VGA controller, clock divider , BTN Debouncer, constraints |
 
 ## How to Use
 
